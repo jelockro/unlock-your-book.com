@@ -48,5 +48,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "imagemin": "^6.0.0"
   },
-  "homepage": "https://demos.creative-tim.com/material-kit/index.html"
+  "homepage": "https://demos.creative-tim.com/material-kit/index.html",
+  "dependencies": {
+    "gulp-images-resizer": "0.0.5"
+  }
 }

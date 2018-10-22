@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var open = require('gulp-open');
 var imageResize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
+var resizer = require('gulp-images-resizer');
 
 var Paths = {
   HERE: './',
@@ -33,6 +34,15 @@ gulp.task('images', () =>
     ]))
     .pipe(gulp.dest('optimized'))
 );
+
+gulp.task('resize', () => {
+  return gulp.src('assets/img/new-adds/*.*')
+    .pipe(resizer({
+      format: "png",
+      width: "50%"
+    }))
+    .pipe(gulp.dest('optimized/'));
+});
 
 gulp.task('watch', function() {
   gulp.watch(Paths.SCSS, ['compile-scss']);
