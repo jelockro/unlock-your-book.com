@@ -7,6 +7,9 @@ var open = require('gulp-open');
 var imageResize = require('gulp-image-resize');
 var imagemin = require('gulp-imagemin');
 var resizer = require('gulp-images-resizer');
+const flatMap = require('flat-map').default
+const scaleImages = require('gulp-scale-images');
+
 
 var Paths = {
   HERE: './',
@@ -15,6 +18,21 @@ var Paths = {
   SCSS_TOOLKIT_SOURCES: './assets/scss/material-kit.scss',
   SCSS: './assets/scss/**/**'
 };
+
+const twoVariantsPerFile = (file, cb) => {
+  const pngFile = file.clone()
+  pngFile.scale = {maxWidth: 500, maxHeight: 500, format: 'png'}
+  const jpegFile = file.clone()
+  jpegFile.scale = {maxWidth: 700, format: 'jpeg'}
+  cb(null, [pngFile, jpegFile])
+}
+
+gulp.task('resizer', () => {
+  return gulp.src('assets/img/new-adds/*.{jpeg,jpg,png,gif}')
+  .pipe(flatMap(twoVariantsPerFile))
+  .pipe(scaleImages())
+  .pipe(gulp.dest('optimized/'));
+});
 
 gulp.task('compile-scss', function() {
   return gulp.src(Paths.SCSS_TOOLKIT_SOURCES)
