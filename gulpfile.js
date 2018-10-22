@@ -65,6 +65,7 @@ gulp.task('resize', () => {
 
 gulp.task('watch', function() {
   gulp.watch(Paths.SCSS, ['compile-scss']);
+  gulp.watch("*.html").on('change', bs.reload);
 });
 
 gulp.task('open', function() {
@@ -80,4 +81,4 @@ gulp.task('browser-sync', () => {
   });
 });
 
-gulp.task('open-app', ['open', 'watch']);
+gulp.task('open-app', ['browser-sync','watch']);
