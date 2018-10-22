@@ -5,6 +5,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var open = require('gulp-open');
 var imageResize = require('gulp-image-resize');
+var imageop = require('gulp-image-optimization');
+
 
 var Paths = {
   HERE: './',
@@ -21,6 +23,15 @@ gulp.task('compile-scss', function() {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.CSS));
+});
+
+gulp.task('images', function(cb) {
+  gulp.src(['assets/img/new-adds/*.png','assets/img/new-adds/*.jpg', 'assets/img/new-adds/*.jpeg', 'assets/img/new-adds/*.gif'])
+    .pipe(imageop({
+      optimizationLevel: 5,
+      progressive: true,
+      interlaced: true
+    })).pipe(gulp.dest('assets/img/optimized')).on('end', cb).on('error', cb);
 });
 
 gulp.task('watch', function() {
