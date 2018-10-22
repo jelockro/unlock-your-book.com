@@ -41,7 +41,8 @@ gulp.task('compile-scss', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write(Paths.HERE))
-    .pipe(gulp.dest(Paths.CSS));
+    .pipe(gulp.dest(Paths.CSS))
+    .pipe(bs.stream({match: '**/*.css'}));
 });
 
 gulp.task('images', () => 
@@ -64,8 +65,9 @@ gulp.task('resize', () => {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(Paths.SCSS, ['compile-scss']);
+  gulp.watch(Paths.SCSS, ['compile-scss']); //.on('change', bs.reload);
   gulp.watch("*.html").on('change', bs.reload);
+  gulp.watch('*.js').on('change', bs.reload);
 });
 
 gulp.task('open', function() {
@@ -75,6 +77,7 @@ gulp.task('open', function() {
 
 gulp.task('browser-sync', () => {
   bs.init({
+    injectChanges: true,
     server: {
       baseDir: "./"
     }
