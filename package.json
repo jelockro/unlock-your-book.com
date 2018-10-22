@@ -37,6 +37,7 @@
     "url": "https://github.com/creativetimofficial/material-kit/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "flat-map": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",

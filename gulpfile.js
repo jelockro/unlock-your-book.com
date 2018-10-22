@@ -9,6 +9,7 @@ var imagemin = require('gulp-imagemin');
 var resizer = require('gulp-images-resizer');
 const flatMap = require('flat-map').default
 const scaleImages = require('gulp-scale-images');
+const bs = require('browser-sync').create(); // Create a browser sync instance
 
 
 var Paths = {
@@ -69,6 +70,14 @@ gulp.task('watch', function() {
 gulp.task('open', function() {
   gulp.src('index.html')
     .pipe(open());
+});
+
+gulp.task('browser-sync', () => {
+  bs.init({
+    server: {
+      baseDir: "./"
+    }
+  });
 });
 
 gulp.task('open-app', ['open', 'watch']);
