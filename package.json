@@ -40,10 +40,11 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean": "^0.4.0",
+    "gulp-image-resize": "^0.13.0",
     "gulp-install": "^1.1.0",
+    "gulp-open": "^3.0.1",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-open": "^3.0.1"
+    "gulp-sourcemaps": "^2.6.4"
   },
   "homepage": "https://demos.creative-tim.com/material-kit/index.html"
 }

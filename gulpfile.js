@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var open = require('gulp-open');
+var imageResize = require('gulp-image-resize');
 
 var Paths = {
   HERE: './',
