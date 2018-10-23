@@ -9992,9 +9992,14 @@ textarea {
     position: relative;
     color: inherit;
     height: 50px;
-    font-size: 1.125rem;
+    font-family: "Lato";
+    font-size: 1.25rem;
     line-height: 30px;
     padding: 0.625rem 0; }
+  .navbar .navbar-brand-logo {
+    position: relative;
+    color: inherit;
+    height: 50px; }
   .navbar.bg-primary {
     color: #fff;
     background-color: #9c27b0 !important;
@@ -10420,7 +10425,14 @@ small,
   font-size: 75%;
   color: #777; }
 
-.title,
+.title {
+  font-weight: 700;
+  font-family: 'Roboto'; }
+  .title,
+  .title a {
+    color: #3C4858;
+    text-decoration: none; }
+
 .card-title,
 .info-title,
 .footer-brand,
@@ -10429,8 +10441,6 @@ small,
 .media .media-heading {
   font-weight: 700;
   font-family: "Roboto Slab", "Times New Roman", serif; }
-  .title,
-  .title a,
   .card-title,
   .card-title a,
   .info-title,
@@ -11402,6 +11412,9 @@ h2.title {
     bottom: 60px; }
   .page-header > .container {
     color: #fff; }
+  .page-header .brand h1 {
+    font-family: "Lato";
+    color: gold; }
   .page-header .title {
     color: #fff; }
   .page-header.header-small {
@@ -11423,7 +11436,7 @@ h2.title {
     top: 0;
     content: ""; }
   .header-filter::before {
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.7); }
   .header-filter .container {
     z-index: 2;
     position: relative; }
