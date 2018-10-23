@@ -60,7 +60,17 @@ small,
     color: #777;
 }
 
-.title,
+.title {
+    font-weight: $font-weight-extra-bold;
+    font-family: 'Roboto';
+
+    &,
+    a{
+        color: $black-color;
+        text-decoration: none;
+    } 
+}
+
 .card-title,
 .info-title,
 .footer-brand,

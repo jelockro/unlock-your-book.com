@@ -15,7 +15,10 @@
     > .container{
         color: $white-color;
     }
-
+    .brand h1{
+        font-family: "Lato";
+        color: gold;
+    }
     .title{
         color: $white-color;
     }
@@ -51,7 +54,7 @@
     }
 
     &::before{
-    background: rgba(0,0,0,.75);
+    background: rgba(0,0,0,.7);
     }
 
     .container{
