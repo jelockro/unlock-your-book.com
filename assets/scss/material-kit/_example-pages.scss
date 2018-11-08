@@ -28,6 +28,45 @@
     h4.description{
         font-size: 1.5em;
     }
+    .profile-tabs{
+        margin-top: $margin-base * 4;
+    }
+    .gallery{
+        margin-top: $margin-base * 3;
+        padding-bottom: 50px;
+
+        img{
+            width: 100%;
+            margin-bottom: $margin-base * 2;
+        }
+    }
+    .follow{
+        .btn-fab{
+            margin-top: -28px;
+        }
+    }
+    .card-background{
+        .content{
+            padding: 30% 0;
+            min-width: 160px;
+        }
+    }
+    .work{
+        padding: 40px 0px;
+        .collections{
+            margin-top: 20px;
+        }
+
+        .stats{
+            ul > li{
+                padding: 5px 0px;
+                font-size: 1em;
+                b{
+                    font-size: 1.2em;
+                }
+
+            }
+        }
 }
 .section{
   padding: 70px 0;
