@@ -5,15 +5,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var open = require('gulp-open');
 var imageResize = require('gulp-image-resize');
-<<<<<<< HEAD
-var imageop = require('gulp-image-optimization');
-=======
 var imagemin = require('gulp-imagemin');
 var resizer = require('gulp-images-resizer');
 const flatMap = require('flat-map').default
 const scaleImages = require('gulp-scale-images');
 const bs = require('browser-sync').create(); // Create a browser sync instance
->>>>>>> my-temporary-work
 
 
 var Paths = {
