@@ -45,6 +45,15 @@ gulp.task('compile-scss', function() {
     .pipe(bs.stream({match: '**/*.css'}));
 });
 
+gulp.task('build-scss', function() {
+    return gulp.src(Paths.SCSS_TOOLKIT_SOURCES)
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(sourcemaps.write(Paths.HERE))
+      .pipe(gulp.dest('dist/assets/css/'));
+  });
+
 gulp.task('images', () => 
   gulp.src('assets/img/new-adds/*')
     .pipe(imagemin([
@@ -73,6 +82,22 @@ gulp.task('images', function(cb) {
     })).pipe(gulp.dest('assets/img/optimized')).on('end', cb).on('error', cb);
 });
 
+gulp.task('move-html', function() {
+  return gulp.src('index.html')
+    .pipe(gulp.dest(Paths.DIST));
+});
+
+gulp.task('move-js', function() {
+  return gulp.src('assets/js/**/*.js')
+    .pipe(gulp.dest('dist/assets/js/'))
+});
+
+gulp.task('move-img', function() {
+  return gulp.src('assets/img/**/*.{png,gif,jpg,jpeg}')
+    .pipe(gulp.dest('dist/assets/img/'));
+});
+
+
 gulp.task('watch', function() {
   gulp.watch(Paths.SCSS, ['compile-scss']); //.on('change', bs.reload);
   gulp.watch("*.html").on('change', bs.reload);
@@ -93,4 +118,5 @@ gulp.task('browser-sync', () => {
   });
 });
 
+gulp.task('deploy', ['move-html', 'build-scss', 'move-js', 'move-img']);
 gulp.task('open-app', ['browser-sync','watch']);
