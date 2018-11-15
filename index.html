@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.css" rel="stylesheet" />
+  <link rel="icon" href="\assets\img\new-adds\golden_key_logo_50.png">
 </head>
 
 <body >
@@ -44,7 +45,7 @@
               </div>
           </li> -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/documents/how-to-guide.pdf" class="nav-link">
                 <i class="material-icons">build</i> Free How-To Guide
               </a>
           </li>
@@ -54,7 +55,7 @@
               </a>
           </li>
           <li class="nav-item">
-              <a href="#reach-us" class="nav-link">
+              <a href="#mc-embedded-subscribe-form" class="nav-link">
                 <i class="material-icons">email</i> Get Started
               </a>
           </li>
@@ -104,10 +105,10 @@
                 </div>
                 <h4 class="info-title">Free Chat</h4>
                 <p>
-                  Unlike any other program you will find, you don't have to pay in order to chat with us.
-                  We will coach you on exactly what you need to do in order to get results like ours. 
-                  We have also provided a free step-by-step guide on how to replicate our process as well
-                  as a free business assessment tool.  Please use them, and if you have any further questions, 
+                  Unlike any other program you may find, you don't have to pay to chat with us.
+                  We will coach you on how to get results like ours. 
+                  We have provided you, at the top of the page, a free step-by-step guide on how to replicate our process and
+                  a free business assessment tool.  Please use them! If you have any further questions, 
                   we are happy to help.
                 </p>
               </div>
@@ -120,11 +121,12 @@
                 </div>
                 <h4 class="info-title">Created By Financial Advisers</h4>
                 <p>
-                  This is a process that we created at Owlfi. It is not one of those marketing programs that tries to fit
-                  financial advisors into it.  We have found that many programs might work for professionals outside
-                  the financial industry.  But our industry has different regulations that create unique hurdles we believ
-                  only financial professionals can truly understand.  This is a fully compliant process that has what's 
-                  best for your client in mind
+                  This is a process that we created at our own firm, <a href="https://www.owlfi.com">OWLFI</a>. 
+                  It is not another generic marketing program that tries to shove
+                  financial advisors into it. Though these programs might work for professionals outside
+                  our industry, we believe advisers have unique hurdles that only those inside the
+                  financial profession can truly understand. Also, this process is fully compliant and upholds the standard to
+                  always do what's in the best interest for the client.
                 </p>
               </div>
             </div>
@@ -156,7 +158,7 @@
                 <div class="team-player">
                   <div class="card card-plain">
                     <div class="col-md-6 ml-auto mr-auto">
-                      <img src="../assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                      <img src="../assets/img/faces/elliot_400.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                     </div>
                     <h4 class="card-title">
                       "Elliot Omanson"
@@ -184,7 +186,7 @@
                 <div class="team-player">
                   <div class="card card-plain">
                     <div class="col-md-6 ml-auto mr-auto">
-                      <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                      <img src="../assets/img/faces/aubrey_400.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                     </div>
                     <h4 class="card-title">
                       "Aubrey Omanson"
@@ -340,7 +342,8 @@
             <div class="row">
               <div class="col-lg-6 ml-auto mr-auto">
                 <div class="card card-login">
-                  <form id="reach-us" action="mailto:josh@owlfi.com" method="post" ecntype="multipart/form-data">
+                  <form action="https://owlfi.us16.list-manage.com/subscribe/post?u=9c42bbd9ac105e28d32d56d19&amp;id=9eb78aaf48" method="post" ecntype="multipart/form-data"
+                  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div class="card-header card-header-primary text-center">
                       <h4 class="card-title">Let's Get Started</h4>
                       <div class="social-line">
@@ -350,44 +353,60 @@
 
                       </div>
                     </div>
-                    <!---<p class="description text-center">Or Be Classical</p> -->
+                    <p class="description text-center"><span class="asterisk">*</span> indicates required</p>
                     <div class="card-body">
-                      <div class="input-group">
+                      <div class="mc-field-group input-group">
                         <div class="input-group-prepend">
                           <span class="input-group-text">
                             <i class="material-icons">face</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="First Name...">
+                        <input type="text" name="FNAME" id="mce-FNAME" class="form-control" placeholder="First Name...">
                       </div>
                       <div class="input-group">
                         <div class="input-group-prepend">
                           <span class="input-group-text">
                             <i class="material-icons">mail</i>
                           </span>
+                          <span class="asterisk">*</span>
+                        </label>
                         </div>
-                        <input type="email" class="form-control" placeholder="Email...">
+                        <input id="mce-EMAIL" type="email" name="EMAIL" class="form-control required email" placeholder="Email...">
                       </div>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">explore</i>
-                          </span>
-                        </div>
-                        <input type="State" class="form-control" placeholder="State...">
+                      <div class="mc-field-group input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">explore</i>
+                            </span>
+                            <span class="asterisk">*</span>
+                          </div>
+                        <input type="text" name="MMERGE2" class="required form-control" id="mce-MMERGE" placeholder="State...">
                       </div>
+                      <div id="mce-response" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9c42bbd9ac105e28d32d56d19_9eb78aaf48" tabindex="-1" value=""></div>
+    
                     </div>
-                    <h3>Finished With Your Business Assessment Tool? You can upload it now.</h3>
-                    <div class="file-input">
-                        <input type='file' name="mail">
-                        <span class='button'>Upload Your Spreadsheet</span>
-                        <span class='label' data-js-label>No File Selected</label>
-                    </div>
+  
   
   
                 <br>
-                <button type="submit" class="btn btn-primary">Let's Get Started</button>
+                <div class="clear">
+                  <input type="submit" value="Let's Get Started" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                </div>
+                <!-- <button type="submit" class="btn btn-primary">Let's Get Started</button> -->
                   </form>
+                  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='MMERGE2';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script> 
+              </div>    
+                 
+                 <!--<h3>Finished With Your Business Assessment Tool? You can upload it now.</h3> 
+                   <div class="file-input">
+                      <input type='file' name="mail">
+                      <span class='button'>Upload Your Spreadsheet</span>
+                      <span class='label' data-js-label>No File Selected</label>
+                  </div>              -->
                 </div>
               </div>
             </div>
